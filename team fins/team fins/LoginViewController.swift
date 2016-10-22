@@ -17,44 +17,28 @@ class LoginViewController: UIViewController {
         errorLabel?.isHidden = true
         guard let username = usernameField?.text else { return }
         guard let password = passwordField?.text else { return }
-        let validUser = ValidationHelper.validEmail(email: username)
-        let validPassword = ValidationHelper.validPassword(pass: password)
-        if (!validPassword.success) {
-            if let error = validPassword.error {
-                self.failedLabel(withTitle: error)
+
+        RemoteServiceManager.authenticateUser(username: username, password: password) {
+            [weak self] responseProvider in
+            guard responseProvider != nil else {
+                self?.failedLabel(withTitle: "Login Failed")
+                return
             }
-        } else if (!validUser) {
-            self.failedLabel(withTitle: "Please enter a valid email address.")
-        } else {
-            RemoteServiceManager.authenticateUser(username: username, password: password) { responseProvider in
-                guard responseProvider != nil else {
-                    self.failedAlert(withTitle: "Error", andMessage: "We were unable to validate your username and password, please try again.")
-                    return
-                }
-                
-            }
+            
+            //TODO: navigate to client intake controller
         }
         
     }
     
     @IBAction func createAccount() {
         errorLabel?.isHidden = true
-        let accountController = CreateAccountViewController.newInstance()
-        self.navigationController?.pushViewController(accountController, animated: true)
+        let accountController = CreateAccountViewController.newController()
+        navigationController?.pushViewController(accountController, animated: true)
     }
     
     func failedLabel(withTitle: String) {
         errorLabel?.text = withTitle
         errorLabel?.isHidden = false
-    }
-    
-    func failedAlert(withTitle: String?, andMessage: String?) {
-        let alert = UIAlertController(title: withTitle, message: andMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            alert.dismiss(animated: true, completion: nil)
-            self.clearFields()
-        }))
-        present(alert, animated: true, completion: nil)
     }
     
     func clearFields() {

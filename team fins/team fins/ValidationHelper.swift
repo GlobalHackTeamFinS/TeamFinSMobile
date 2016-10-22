@@ -16,8 +16,12 @@ struct ValidationHelper {
         return predicate.evaluate(with: text)
     }
     
-    static func validPassword(pass: String) -> (success: Bool, error: String?) {
-        if pass.characters.count < 8 {
+    static func validPassword(pass: String, confirmPass:String) -> (success: Bool, error: String?) {
+        guard confirmPass == pass else {
+            return (false, "Your passwords do not match")
+        }
+        
+        guard pass.characters.count >= 8 else {
             return (false, "Your password must be at least 8 characters long")
         }
         
