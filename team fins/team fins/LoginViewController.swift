@@ -39,26 +39,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func createAccount() {
         errorLabel?.isHidden = true
-        guard let username = usernameField?.text else { return }
-        guard let password = passwordField?.text else { return }
-        let validUser = ValidationHelper.validEmail(email: username)
-        let validPassword = ValidationHelper.validPassword(pass: password)
-        if (!validPassword.success) {
-            if let error = validPassword.error {
-                self.failedLabel(withTitle: error)
-            }
-        } else if (!validUser) {
-            self.failedLabel(withTitle: "Please enter a valid email address.")
-        } else {
-            RemoteServiceManager.createUser(username: username, password: password) { responseProvider in
-                guard responseProvider != nil else {
-                    self.failedAlert(withTitle: "Error", andMessage: "We were unable to create a user account with your information, please try again.")
-                    return
-                }
-                
-            }
-        }
-        
+        let accountController = CreateAccountViewController.newInstance()
+        self.navigationController?.pushViewController(accountController, animated: true)
     }
     
     func failedLabel(withTitle: String) {
