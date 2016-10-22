@@ -23,6 +23,6 @@ struct ValidationHelper {
 //            let validPassword = regex.firstMatch(in: pass, options: NSRegularExpression.MatchingOptions(rawValue: UInt(0)), range: NSMakeRange(0, pass.characters.count))
 //            return validPassword(pass: pass) && pass.characters.count > 7
 //        }
-        
+        return false
     }
 }
