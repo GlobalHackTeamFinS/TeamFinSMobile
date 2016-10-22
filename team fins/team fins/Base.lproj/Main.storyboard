@@ -40,7 +40,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.1764705882" green="0.17254901959999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="joz-P2-F0P">
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,7 +49,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.17647058823529413" green="0.17254901960784313" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-32-tHB" customClass="BorderedButton" customModule="team_fins" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.27450980392156865" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,6 +60,9 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="attemptLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="73T-Xf-5nE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZI-sA-Bfq" customClass="BorderedButton" customModule="team_fins" customModuleProvider="target">
                                 <constraints>
@@ -69,6 +72,9 @@
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" red="0.27450980392156865" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccount" destination="BYZ-38-t0r" eventType="touchUpInside" id="8XR-xv-iX6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pillow Panel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obe-Tn-8JD">
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
