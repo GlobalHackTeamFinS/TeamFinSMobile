@@ -24,6 +24,11 @@
 		CBF205EE1DBBC2DB00E03D48 /* ClientIntakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF205EC1DBBC2DB00E03D48 /* ClientIntakeViewController.xib */; };
 		CBF205F31DBBC80F00E03D48 /* InterfaceTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205F21DBBC80F00E03D48 /* InterfaceTheme.swift */; };
 		CBF205F51DBBCA2700E03D48 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205F41DBBCA2700E03D48 /* RemoteService.swift */; };
+		CBF205F71DBBDEFF00E03D48 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF205F61DBBDEFF00E03D48 /* CoreLocation.framework */; };
+		CBF205F91DBBDF1100E03D48 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF205F81DBBDF1100E03D48 /* QuartzCore.framework */; };
+		CBF205FB1DBBE00800E03D48 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205FA1DBBE00800E03D48 /* BorderedButton.swift */; };
+		CBF205FC1DBBE2A200E03D48 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBF205F01DBBC7CD00E03D48 /* Lato-Bold.ttf */; };
+		CBF205FD1DBBE2A500E03D48 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBF205F11DBBC7CD00E03D48 /* Lato-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,9 @@
 		CBF205F11DBBC7CD00E03D48 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		CBF205F21DBBC80F00E03D48 /* InterfaceTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceTheme.swift; sourceTree = "<group>"; };
 		CBF205F41DBBCA2700E03D48 /* RemoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
+		CBF205F61DBBDEFF00E03D48 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CBF205F81DBBDF1100E03D48 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CBF205FA1DBBE00800E03D48 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBF205F91DBBDF1100E03D48 /* QuartzCore.framework in Frameworks */,
+				CBF205F71DBBDEFF00E03D48 /* CoreLocation.framework in Frameworks */,
 				CB18FBF6496227516FC305C5 /* Pods_team_fins.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +113,7 @@
 				CBF205D11DBBB8DE00E03D48 /* Assets.xcassets */,
 				CBF205D31DBBB8DE00E03D48 /* LaunchScreen.storyboard */,
 				CBF205D61DBBB8DE00E03D48 /* Info.plist */,
+				CBF205FA1DBBE00800E03D48 /* BorderedButton.swift */,
 			);
 			path = "team fins";
 			sourceTree = "<group>";
@@ -152,6 +163,8 @@
 		F100AC0A43845AADF72A2C42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBF205F81DBBDF1100E03D48 /* QuartzCore.framework */,
+				CBF205F61DBBDEFF00E03D48 /* CoreLocation.framework */,
 				282E9C7B733AC12B651DAE0E /* Pods_team_fins.framework */,
 			);
 			name = Frameworks;
@@ -220,12 +233,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBF205FC1DBBE2A200E03D48 /* Lato-Bold.ttf in Resources */,
 				CBF205DF1DBBBB4B00E03D48 /* CreateAccountViewController.xib in Resources */,
 				CBF205D51DBBB8DE00E03D48 /* LaunchScreen.storyboard in Resources */,
 				CBF205E41DBBBC9600E03D48 /* EditProviderDetailsViewController.xib in Resources */,
 				CBF205D21DBBB8DE00E03D48 /* Assets.xcassets in Resources */,
 				CBF205D01DBBB8DE00E03D48 /* Main.storyboard in Resources */,
 				CBF205EE1DBBC2DB00E03D48 /* ClientIntakeViewController.xib in Resources */,
+				CBF205FD1DBBE2A500E03D48 /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBF205FB1DBBE00800E03D48 /* BorderedButton.swift in Sources */,
 				CBF205E31DBBBC9600E03D48 /* EditProviderDetailsViewController.swift in Sources */,
 				CBF205F51DBBCA2700E03D48 /* RemoteService.swift in Sources */,
 				CBF205EA1DBBC2B500E03D48 /* ProviderInteractor.swift in Sources */,
