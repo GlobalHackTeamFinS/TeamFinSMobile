@@ -3,8 +3,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -18,45 +27,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Wy-no-2Dn">
-                                <frame key="frameInset" minX="109" minY="302" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbU-pC-aYp">
+                                <color key="backgroundColor" red="0.3411764705882353" green="0.0" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="hIx-ZC-lXU"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Wy-no-2Dn">
+                                <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Bnm-dW-Xhj"/>
+                                </constraints>
+                                <color key="textColor" red="0.1764705882" green="0.17254901959999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="joz-P2-F0P">
-                                <frame key="frameInset" minX="97" minY="383" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="joz-P2-F0P">
+                                <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Fcu-pK-OmZ"/>
+                                </constraints>
+                                <color key="textColor" red="0.17647058823529413" green="0.17254901960784313" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-32-tHB">
-                                <frame key="frameInset" minX="180" minY="455" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-32-tHB" customClass="BorderedButton" customModule="team_fins" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.27450980392156865" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="OEe-qJ-Wn4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZI-sA-Bfq">
-                                <frame key="frameInset" minX="109" minY="455" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZI-sA-Bfq" customClass="BorderedButton" customModule="team_fins" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1ZN-sW-uhl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" red="0.27450980392156865" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pillow Panel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obe-Tn-8JD">
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-T4-4yU">
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                                <color key="textColor" red="0.17647058823529413" green="0.17254901960784313" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Obe-Tn-8JD" firstAttribute="bottom" secondItem="sbU-pC-aYp" secondAttribute="bottom" constant="-32" id="0MW-81-tFc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dBd-32-tHB" secondAttribute="trailing" id="1fO-Zc-6R5"/>
+                            <constraint firstItem="5Wy-no-2Dn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8Mq-4B-viG"/>
+                            <constraint firstItem="5Wy-no-2Dn" firstAttribute="top" secondItem="sbU-pC-aYp" secondAttribute="bottom" constant="36" id="9WY-nU-4Vx"/>
+                            <constraint firstItem="dBd-32-tHB" firstAttribute="leading" secondItem="9ZI-sA-Bfq" secondAttribute="trailing" constant="8" id="AbY-WV-RtN"/>
+                            <constraint firstItem="9ZI-sA-Bfq" firstAttribute="top" secondItem="dBd-32-tHB" secondAttribute="top" id="CBW-xE-ZdO"/>
+                            <constraint firstItem="bb9-T4-4yU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EnT-0T-R3j"/>
+                            <constraint firstItem="9ZI-sA-Bfq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="G9t-0j-4IF"/>
+                            <constraint firstItem="dBd-32-tHB" firstAttribute="top" secondItem="joz-P2-F0P" secondAttribute="bottom" constant="20" id="HH8-9M-XWG"/>
+                            <constraint firstItem="sbU-pC-aYp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PJ8-v1-PHf"/>
+                            <constraint firstItem="joz-P2-F0P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wz0-0Y-3HQ"/>
+                            <constraint firstItem="joz-P2-F0P" firstAttribute="top" secondItem="5Wy-no-2Dn" secondAttribute="bottom" constant="8" id="aQJ-yI-gJ1"/>
+                            <constraint firstItem="Obe-Tn-8JD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eLB-Oe-2Lr"/>
+                            <constraint firstItem="bb9-T4-4yU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eQP-rs-IJ4"/>
+                            <constraint firstItem="sbU-pC-aYp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fIg-by-iTt"/>
+                            <constraint firstItem="5Wy-no-2Dn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fb9-CC-3Ft"/>
+                            <constraint firstAttribute="trailing" secondItem="sbU-pC-aYp" secondAttribute="trailing" id="sgZ-Be-Q0Y"/>
+                            <constraint firstItem="joz-P2-F0P" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tFD-b8-tBS"/>
+                            <constraint firstItem="5Wy-no-2Dn" firstAttribute="top" secondItem="bb9-T4-4yU" secondAttribute="bottom" constant="8" id="uVy-dO-epa"/>
+                            <constraint firstItem="dBd-32-tHB" firstAttribute="width" secondItem="9ZI-sA-Bfq" secondAttribute="width" id="yBj-Y9-hbA"/>
+                            <constraint firstItem="Obe-Tn-8JD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zHG-AE-qDX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="etI-4n-Lg2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1103" y="778"/>
+            <point key="canvasLocation" x="1101.5999999999999" y="777.66116941529242"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZLF-LA-KZa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="zvv-zr-Yv6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nwl-op-v2Z">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nwl-op-v2Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
