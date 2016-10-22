@@ -15,8 +15,23 @@ class LoginViewController: UIViewController {
     @IBAction func attemptLogin() {
         guard let username = usernameField?.text else { return }
         guard let password = passwordField?.text else { return }
-        
-        
+        RemoteServiceManager.authenticateUser(username: username, password: password) { (provider, success) in
+            
+        }
+    }
+    
+    func failedAlert(withTitle: String?, andMessage: String?) {
+        let alert = UIAlertController(title: withTitle, message: andMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            alert.dismiss(animated: true, completion: nil)
+            self.clearFields()
+        }))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func clearFields() {
+        usernameField?.text = ""
+        passwordField?.text = ""
     }
 }
 
