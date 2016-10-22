@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		299F502D1DBBE36800F55A31 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F502C1DBBE36800F55A31 /* SwiftyJSON.swift */; };
 		CB18FBF6496227516FC305C5 /* Pods_team_fins.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282E9C7B733AC12B651DAE0E /* Pods_team_fins.framework */; };
 		CBF205CB1DBBB8DE00E03D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205CA1DBBB8DE00E03D48 /* AppDelegate.swift */; };
 		CBF205CD1DBBB8DE00E03D48 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205CC1DBBB8DE00E03D48 /* LoginViewController.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		1F4BB3454A04AE7E2F0FF370 /* Pods-team fins.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-team fins.release.xcconfig"; path = "Pods/Target Support Files/Pods-team fins/Pods-team fins.release.xcconfig"; sourceTree = "<group>"; };
 		282E9C7B733AC12B651DAE0E /* Pods_team_fins.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team_fins.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		299F502C1DBBE36800F55A31 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		357A7C06CC739AB8367DA6FB /* Pods-team fins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-team fins.debug.xcconfig"; path = "Pods/Target Support Files/Pods-team fins/Pods-team fins.debug.xcconfig"; sourceTree = "<group>"; };
 		CBF205C71DBBB8DE00E03D48 /* team fins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "team fins.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF205CA1DBBB8DE00E03D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		CBF205E81DBBC27B00E03D48 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				299F502C1DBBE36800F55A31 /* SwiftyJSON.swift */,
 				CBF205E91DBBC2B500E03D48 /* ProviderInteractor.swift */,
 				CBF205F41DBBCA2700E03D48 /* RemoteService.swift */,
 				CBF205F21DBBC80F00E03D48 /* InterfaceTheme.swift */,
@@ -284,6 +287,7 @@
 				CBF205E31DBBBC9600E03D48 /* EditProviderDetailsViewController.swift in Sources */,
 				CBF205F51DBBCA2700E03D48 /* RemoteService.swift in Sources */,
 				CBF205EA1DBBC2B500E03D48 /* ProviderInteractor.swift in Sources */,
+				299F502D1DBBE36800F55A31 /* SwiftyJSON.swift in Sources */,
 				CBF205DE1DBBBB4B00E03D48 /* CreateAccountViewController.swift in Sources */,
 				CBF205F31DBBC80F00E03D48 /* InterfaceTheme.swift in Sources */,
 				CBF205CD1DBBB8DE00E03D48 /* LoginViewController.swift in Sources */,

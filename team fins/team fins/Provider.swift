@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 struct Provider {
     let uid: Int
@@ -17,6 +18,17 @@ struct Provider {
     let occupiedBeds: Int
     let intakeStart: Int
     let intakeEnd: Int
+    
+    init(fromJSON: JSON) {
+        uid = fromJSON["uid"].int ?? 0
+        phoneNumber = fromJSON["phone"].string ?? ""
+        locationName = fromJSON["location"].string ?? ""
+        generalDescription = fromJSON["description"].string ?? ""
+        totalBeds = fromJSON["totalBeds"].int ?? 0
+        occupiedBeds = fromJSON["occupiedBeds"].int ?? 0
+        intakeStart = fromJSON["intakeStart"].int ?? 0
+        intakeEnd = fromJSON["intakeEnd"].int ?? 0
+    }
 }
 
 struct AcceptedClients {
