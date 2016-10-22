@@ -16,13 +16,31 @@ struct ValidationHelper {
         return predicate.evaluate(with: text)
     }
     
-    static func validPassword(pass: String) -> Bool {
-//        let regexString = "((?=.*[0-9])(?=.*[a-zA-Z]).{8,})"
-//        try {
-//            let regex = NSRegularExpression.init(pattern: regexString, options: .caseInsensitive)
-//            let validPassword = regex.firstMatch(in: pass, options: NSRegularExpression.MatchingOptions(rawValue: UInt(0)), range: NSMakeRange(0, pass.characters.count))
-//            return validPassword(pass: pass) && pass.characters.count > 7
-//        }
-        return false
+    static func validPassword(pass: String) -> (Bool, String?) {
+        if pass.characters.count < 8 {
+            return (false, "Your password must be at least 8 characters long")
+        }
+        
+        guard ValidationHelper.containsLetter(text: pass) else {
+            return (false, "Your password must contain a letter")
+        }
+        
+        guard ValidationHelper.containsNumber(text: pass) else {
+            return (false, "Your password must contain a number")
+        }
+        
+        return (true, nil)
+    }
+
+    static func containsLetter(text:String) -> Bool {
+        let letterRegEx  = ".*[a-zA-Z]+.*"
+        let letterVerification = NSPredicate(format:"SELF MATCHES %@", letterRegEx)
+        return letterVerification.evaluate(with: text)
+    }
+
+    static func containsNumber(text:String) -> Bool {
+        let numberRegEx  = ".*[0-9]+.*"
+        let numberVerification = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
+        return numberVerification.evaluate(with: text)
     }
 }
