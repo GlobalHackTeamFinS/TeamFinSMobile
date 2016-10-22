@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		299F502D1DBBE36800F55A31 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F502C1DBBE36800F55A31 /* SwiftyJSON.swift */; };
 		299F50301DBBFD6E00F55A31 /* AlertGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F502F1DBBFD6E00F55A31 /* AlertGenerator.swift */; };
+		299F50321DBC031F00F55A31 /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F50311DBC031F00F55A31 /* ValidationHelper.swift */; };
 		CB18FBF6496227516FC305C5 /* Pods_team_fins.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282E9C7B733AC12B651DAE0E /* Pods_team_fins.framework */; };
 		CBF205CB1DBBB8DE00E03D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205CA1DBBB8DE00E03D48 /* AppDelegate.swift */; };
 		CBF205CD1DBBB8DE00E03D48 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205CC1DBBB8DE00E03D48 /* LoginViewController.swift */; };
@@ -37,6 +38,7 @@
 		282E9C7B733AC12B651DAE0E /* Pods_team_fins.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_team_fins.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		299F502C1DBBE36800F55A31 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		299F502F1DBBFD6E00F55A31 /* AlertGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertGenerator.swift; sourceTree = "<group>"; };
+		299F50311DBC031F00F55A31 /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
 		357A7C06CC739AB8367DA6FB /* Pods-team fins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-team fins.debug.xcconfig"; path = "Pods/Target Support Files/Pods-team fins/Pods-team fins.debug.xcconfig"; sourceTree = "<group>"; };
 		CBF205C71DBBB8DE00E03D48 /* team fins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "team fins.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF205CA1DBBB8DE00E03D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				CBF205E91DBBC2B500E03D48 /* ProviderInteractor.swift */,
 				CBF205F41DBBCA2700E03D48 /* RemoteService.swift */,
 				CBF205F21DBBC80F00E03D48 /* InterfaceTheme.swift */,
+				299F50311DBC031F00F55A31 /* ValidationHelper.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				CBF205EA1DBBC2B500E03D48 /* ProviderInteractor.swift in Sources */,
 				299F502D1DBBE36800F55A31 /* SwiftyJSON.swift in Sources */,
 				CBF205DE1DBBBB4B00E03D48 /* CreateAccountViewController.swift in Sources */,
+				299F50321DBC031F00F55A31 /* ValidationHelper.swift in Sources */,
 				CBF205F31DBBC80F00E03D48 /* InterfaceTheme.swift in Sources */,
 				CBF205CD1DBBB8DE00E03D48 /* LoginViewController.swift in Sources */,
 				CBF205E71DBBBD1F00E03D48 /* Provider.swift in Sources */,
