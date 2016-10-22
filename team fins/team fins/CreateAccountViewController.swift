@@ -40,7 +40,16 @@ class CreateAccountViewController: UIViewController {
             return
         }
         
-        //TODO: send new user request to backend
+        RemoteServiceManager.createUser(username: username, password: pass) {
+            [weak self] responseProvider in
+            guard responseProvider != nil else {
+                self?.displayError(text: "Failed to login. Please try again.")
+                return
+            }
+            
+            //TODO: send to edit provider details
+        
+        }
     }
         
     func displayError(text: String) {
