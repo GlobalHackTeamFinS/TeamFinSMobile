@@ -1,20 +1,156 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateAccountViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateAccountViewController" customModule="team_fins" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="weY-Cb-8uC">
+                    <color key="backgroundColor" red="0.3411764706" green="0.0" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="B39-TR-Bci"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pillow Panel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTU-nI-cAj">
+                    <frame key="frameInset" minX="16" minY="110" width="343" height="37.5"/>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qP9-oW-950">
+                    <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AL4-5e-eao">
+                    <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.27450980392156865" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="0He-q8-Vcz"/>
+                    </constraints>
+                    <color key="textColor" red="0.1764705882" green="0.17254901959999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ioQ-Wo-XCl">
+                    <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="confirm password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPd-5Z-EaW">
+                    <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.27450980392156865" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Z35-ZG-jvY"/>
+                    </constraints>
+                    <color key="textColor" red="0.1764705882" green="0.17254901959999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qeF-7V-LLP">
+                    <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y2g-Qf-nrr">
+                    <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.27450980390000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="wUz-Jx-U9X"/>
+                    </constraints>
+                    <color key="textColor" red="0.1764705882" green="0.17254901959999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                </textField>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHe-7b-sr3">
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                    <color key="textColor" red="0.1764705882" green="0.17254901959999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npr-tw-ghj" customClass="BorderedButton" customModule="team_fins" customModuleProvider="target">
+                    <color key="backgroundColor" red="0.27450980390000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ycG-dq-0pK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                    <state key="normal" title="SIGN UP">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xn-Yn-3aH" customClass="BorderedButton" customModule="team_fins" customModuleProvider="target">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="H4B-GN-bZe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                    <state key="normal" title="CANCEL">
+                        <color key="titleColor" red="0.27450980390000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your password must contain at least 1 letter and 1 number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpW-TI-oam">
+                    <frame key="frameInset" minX="16" minY="276" width="345" height="17"/>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                    <color key="textColor" red="0.1764705882" green="0.17254901959999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="npr-tw-ghj" firstAttribute="top" secondItem="fPd-5Z-EaW" secondAttribute="bottom" constant="20" id="0Yk-Ja-GyM"/>
+                <constraint firstItem="zTU-nI-cAj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="2p5-Bn-4fg"/>
+                <constraint firstItem="JpW-TI-oam" firstAttribute="top" secondItem="AL4-5e-eao" secondAttribute="bottom" constant="16" id="52j-Ja-imb"/>
+                <constraint firstItem="JpW-TI-oam" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="6eS-SX-Ail"/>
+                <constraint firstItem="AL4-5e-eao" firstAttribute="top" secondItem="vHe-7b-sr3" secondAttribute="bottom" constant="8" id="9Dj-Hl-mUP"/>
+                <constraint firstItem="AL4-5e-eao" firstAttribute="top" secondItem="weY-Cb-8uC" secondAttribute="bottom" constant="36" id="A1V-Lg-Gdt"/>
+                <constraint firstItem="fPd-5Z-EaW" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="ApM-bx-hkD"/>
+                <constraint firstItem="ioQ-Wo-XCl" firstAttribute="trailing" secondItem="fPd-5Z-EaW" secondAttribute="trailing" id="Bk9-no-z82"/>
+                <constraint firstItem="AL4-5e-eao" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="16" id="Bwh-vu-Or2"/>
+                <constraint firstItem="weY-Cb-8uC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CBV-ld-Kts"/>
+                <constraint firstItem="qeF-7V-LLP" firstAttribute="trailing" secondItem="y2g-Qf-nrr" secondAttribute="trailing" id="DWX-bv-cyD"/>
+                <constraint firstItem="npr-tw-ghj" firstAttribute="leading" secondItem="5Xn-Yn-3aH" secondAttribute="trailing" constant="8" id="Ev2-iI-isW"/>
+                <constraint firstItem="y2g-Qf-nrr" firstAttribute="top" secondItem="JpW-TI-oam" secondAttribute="bottom" constant="8" id="Gyb-n6-004"/>
+                <constraint firstItem="qP9-oW-950" firstAttribute="top" secondItem="AL4-5e-eao" secondAttribute="top" id="IPx-2d-di8"/>
+                <constraint firstItem="weY-Cb-8uC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Mqq-eU-UkC"/>
+                <constraint firstItem="ioQ-Wo-XCl" firstAttribute="top" secondItem="fPd-5Z-EaW" secondAttribute="top" id="Oza-F2-1qX"/>
+                <constraint firstItem="qeF-7V-LLP" firstAttribute="top" secondItem="y2g-Qf-nrr" secondAttribute="top" id="Scs-fw-gEU"/>
+                <constraint firstItem="qeF-7V-LLP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="TTy-ox-IhF"/>
+                <constraint firstItem="AL4-5e-eao" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="Ucl-z1-DAI"/>
+                <constraint firstItem="zTU-nI-cAj" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="UrS-pM-u5y"/>
+                <constraint firstItem="qP9-oW-950" firstAttribute="bottom" secondItem="AL4-5e-eao" secondAttribute="bottom" id="Vaj-77-8CT"/>
+                <constraint firstItem="fPd-5Z-EaW" firstAttribute="top" secondItem="y2g-Qf-nrr" secondAttribute="bottom" constant="8" id="Wde-we-Osb"/>
+                <constraint firstItem="zTU-nI-cAj" firstAttribute="bottom" secondItem="weY-Cb-8uC" secondAttribute="bottom" constant="-32" id="Y1u-QX-OLB"/>
+                <constraint firstItem="qeF-7V-LLP" firstAttribute="bottom" secondItem="y2g-Qf-nrr" secondAttribute="bottom" id="Yi8-R3-mtI"/>
+                <constraint firstItem="vHe-7b-sr3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="Zz6-8M-1jA"/>
+                <constraint firstItem="5Xn-Yn-3aH" firstAttribute="top" secondItem="npr-tw-ghj" secondAttribute="top" id="cJf-n4-WL3"/>
+                <constraint firstItem="qP9-oW-950" firstAttribute="trailing" secondItem="AL4-5e-eao" secondAttribute="trailing" id="eBI-rM-u4e"/>
+                <constraint firstItem="vHe-7b-sr3" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="fAt-C9-9y0"/>
+                <constraint firstItem="ioQ-Wo-XCl" firstAttribute="bottom" secondItem="fPd-5Z-EaW" secondAttribute="bottom" id="fob-FS-Jh8"/>
+                <constraint firstItem="5Xn-Yn-3aH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="gNS-Ng-EKc"/>
+                <constraint firstItem="npr-tw-ghj" firstAttribute="width" secondItem="5Xn-Yn-3aH" secondAttribute="width" id="hBt-Ll-Q0S"/>
+                <constraint firstItem="JpW-TI-oam" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="hR2-BG-GpS"/>
+                <constraint firstItem="y2g-Qf-nrr" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="muI-bI-h1W"/>
+                <constraint firstItem="qP9-oW-950" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="qYh-2x-gGK"/>
+                <constraint firstAttribute="trailingMargin" secondItem="npr-tw-ghj" secondAttribute="trailing" id="qxJ-nw-mGT"/>
+                <constraint firstAttribute="trailing" secondItem="weY-Cb-8uC" secondAttribute="trailing" id="trt-iO-n69"/>
+                <constraint firstItem="y2g-Qf-nrr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="16" id="vWQ-Bi-GP2"/>
+                <constraint firstItem="fPd-5Z-EaW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="16" id="wHL-wY-Lj5"/>
+                <constraint firstItem="ioQ-Wo-XCl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="zCU-US-bhd"/>
+            </constraints>
+            <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>
 </document>
