@@ -15,7 +15,23 @@ class LoginViewController: UIViewController {
     @IBAction func attemptLogin() {
         guard let username = usernameField?.text else { return }
         guard let password = passwordField?.text else { return }
-        RemoteServiceManager.authenticateUser(username: username, password: password) { (provider, success) in
+        RemoteServiceManager.authenticateUser(username: username, password: password) { responseProvider in
+            guard responseProvider != nil else {
+                self.failedAlert(withTitle: "Error", andMessage: "We were unable to validate your username and password, please try again.")
+                return
+            }
+            
+        }
+    }
+    
+    @IBAction func createAccount() {
+        guard let username = usernameField?.text else { return }
+        guard let password = passwordField?.text else { return }
+        RemoteServiceManager.createUser(username: username, password: password) { responseProvider in
+            guard responseProvider != nil else {
+                self.failedAlert(withTitle: "Error", andMessage: "We were unable to create a user account with your information, please try again.")
+                return
+            }
             
         }
     }

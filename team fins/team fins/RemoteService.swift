@@ -11,7 +11,7 @@ import Alamofire
 
 struct RemoteServiceManager {
     
-    static func authenticateUser(username: String, password: String, withProvider: @escaping (Provider?, Bool) -> Void) {
+    static func authenticateUser(username: String, password: String, withProvider: @escaping (Provider?) -> Void) {
         let authenticationUrl = "";
         let parameters: Parameters = [
             "user": username,
@@ -23,15 +23,15 @@ struct RemoteServiceManager {
             case .success(let value):
                 let json = JSON(value)
                 let provider = Provider(fromJSON: json)
-                withProvider(provider, true)
+                withProvider(provider)
             case .failure(let error):
                 print(error)
-                withProvider(nil, false)
+                withProvider(nil)
             }
         }
     }
     
-    static func createUser(username: String, password: String, forProvider: @escaping (Provider?, Bool) -> Void) {
+    static func createUser(username: String, password: String, forProvider: @escaping (Provider?) -> Void) {
         let createUrl = "";
         let parameters: Parameters = [
             "user": username,
@@ -43,10 +43,10 @@ struct RemoteServiceManager {
             case .success(let value):
                 let json = JSON(value)
                 let provider = Provider(fromJSON: json)
-                forProvider(provider, true)
+                forProvider(provider)
             case .failure(let error):
                 print(error)
-                forProvider(nil, false)
+                forProvider(nil)
             }
         }
     }
