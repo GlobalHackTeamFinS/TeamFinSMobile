@@ -11,29 +11,59 @@ import UIKit
 class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField?
     @IBOutlet weak var passwordField: UITextField?
+    @IBOutlet weak var errorLabel: UILabel?
     
     @IBAction func attemptLogin() {
+        errorLabel?.isHidden = true
         guard let username = usernameField?.text else { return }
         guard let password = passwordField?.text else { return }
-        RemoteServiceManager.authenticateUser(username: username, password: password) { responseProvider in
-            guard responseProvider != nil else {
-                self.failedAlert(withTitle: "Error", andMessage: "We were unable to validate your username and password, please try again.")
-                return
+        let validUser = ValidationHelper.validEmail(email: username)
+        let validPassword = ValidationHelper.validPassword(pass: password)
+        if (!validPassword.success) {
+            if let error = validPassword.error {
+                self.failedLabel(withTitle: error)
             }
-            
+        } else if (!validUser) {
+            self.failedLabel(withTitle: "Please enter a valid email address.")
+        } else {
+            RemoteServiceManager.authenticateUser(username: username, password: password) { responseProvider in
+                guard responseProvider != nil else {
+                    self.failedAlert(withTitle: "Error", andMessage: "We were unable to validate your username and password, please try again.")
+                    return
+                }
+                
+            }
         }
+        
     }
     
     @IBAction func createAccount() {
+        errorLabel?.isHidden = true
         guard let username = usernameField?.text else { return }
         guard let password = passwordField?.text else { return }
-        RemoteServiceManager.createUser(username: username, password: password) { responseProvider in
-            guard responseProvider != nil else {
-                self.failedAlert(withTitle: "Error", andMessage: "We were unable to create a user account with your information, please try again.")
-                return
+        let validUser = ValidationHelper.validEmail(email: username)
+        let validPassword = ValidationHelper.validPassword(pass: password)
+        if (!validPassword.success) {
+            if let error = validPassword.error {
+                self.failedLabel(withTitle: error)
             }
-            
+        } else if (!validUser) {
+            self.failedLabel(withTitle: "Please enter a valid email address.")
+        } else {
+            RemoteServiceManager.createUser(username: username, password: password) { responseProvider in
+                guard responseProvider != nil else {
+                    self.failedAlert(withTitle: "Error", andMessage: "We were unable to create a user account with your information, please try again.")
+                    return
+                }
+                
+            }
         }
+        
+    }
+    
+    func failedLabel(withTitle: String) {
+        errorLabel?.text = withTitle
+        errorLabel?.isHidden = false
     }
     
     func failedAlert(withTitle: String?, andMessage: String?) {

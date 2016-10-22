@@ -114,6 +114,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="etI-4n-Lg2"/>
                     <connections>
+                        <outlet property="errorLabel" destination="bb9-T4-4yU" id="ku1-vt-ien"/>
                         <outlet property="passwordField" destination="joz-P2-F0P" id="XjV-V7-DB7"/>
                         <outlet property="usernameField" destination="5Wy-no-2Dn" id="pgc-L7-Dts"/>
                     </connections>
@@ -127,7 +128,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="zvv-zr-Yv6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nwl-op-v2Z">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nwl-op-v2Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
