@@ -9,6 +9,4 @@
 import UIKit
 
 class CreateAccountViewController: UIViewController {
-
-//accepted types - men, women, children, handicapped
 }
