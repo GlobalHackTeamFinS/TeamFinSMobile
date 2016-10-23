@@ -11,10 +11,23 @@ import Alamofire
 
 struct RemoteServiceManager {
     
+    /*
+     app.get('/', homeController.index);
+     app.post('/provider/new', providerController.newProvider);
+     app.put('/provider/:id', authenticate, providerController.updateProvider);
+     // app.delete('/provider/:id', providerController.deleteProvider);
+     app.post('/provider/login', providerController.login);
+     app.post('/provider/logout', providerController.logout);
+     app.post('/provider/:id/increment', authenticate, providerController.increment);
+     app.post('/provider/:id/decrement', authenticate, providerController.decrement);
+     app.post('/provider/:id/setBase', providerController.setBase);
+    */
+    
     static func authenticateUser(username: String, password: String, withProvider: @escaping (Provider?) -> Void) {
-        let authenticationUrl = "";
+        let authenticationUrl = "\(RemoteServiceManager.baseURL())/provider/login"
+        //app.post('/provider/login', providerController.login);
         let parameters: Parameters = [
-            "user": username,
+            "email": username,
             "password": password
         ]
         
@@ -22,6 +35,9 @@ struct RemoteServiceManager {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
+                if let token = json["token"].string {
+                    RemoteServiceManager.storeAuthenticationToken(token: token)
+                }
                 let provider = Provider(fromJSON: json)
                 withProvider(provider)
             case .failure(let error):
@@ -29,12 +45,17 @@ struct RemoteServiceManager {
                 withProvider(nil)
             }
         }
+        
+        DispatchQueue.main.async {
+            
+        }
     }
     
     static func createUser(username: String, password: String, forProvider: @escaping (Provider?) -> Void) {
-        let createUrl = "";
+        let createUrl =  "\(RemoteServiceManager.baseURL())/provider/new"
+        
         let parameters: Parameters = [
-            "user": username,
+            "email": username,
             "password": password
         ]
         
@@ -42,6 +63,9 @@ struct RemoteServiceManager {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
+                if let token = json["token"].string {
+                    RemoteServiceManager.storeAuthenticationToken(token: token)
+                }
                 let provider = Provider(fromJSON: json)
                 forProvider(provider)
             case .failure(let error):
@@ -52,13 +76,13 @@ struct RemoteServiceManager {
     }
     
     static func incrementOccupancyFor(providerId: String, completion: @escaping (Bool) -> Void) {
-        let occupancyUrl = "";
-        let parameters: Parameters = [
-            "providerId" : providerId
+        let occupancyUrl = "\(RemoteServiceManager.baseURL())/provider/\(providerId)/increment"
+        
+        let headers: HTTPHeaders = [
+            "token": RemoteServiceManager.retrieveToken() ?? ""
         ]
         
-        Alamofire.request(occupancyUrl, parameters: parameters).response { response in
-            
+        Alamofire.request(occupancyUrl, headers: headers).response { response in
             if ((response.error) != nil) {
                 completion(false)
                 return
@@ -68,12 +92,13 @@ struct RemoteServiceManager {
     }
     
     static func decrementOccupancyFor(providerId: String, completion: @escaping (Bool) -> Void) {
-        let occupancyUrl = "";
-        let parameters: Parameters = [
-            "providerId" : providerId
+        let occupancyUrl = "\(RemoteServiceManager.baseURL())/provider/\(providerId)/decrement"
+        
+        let headers: HTTPHeaders = [
+            "token": RemoteServiceManager.retrieveToken() ?? ""
         ]
         
-        Alamofire.request(occupancyUrl, parameters: parameters).response { response in
+        Alamofire.request(occupancyUrl, headers: headers).response { response in
             if (response.error != nil) {
                 completion(false)
                 return
@@ -140,7 +165,11 @@ struct RemoteServiceManager {
             parameters["acceptedClients"] = clientsParameters
         }
         
-        Alamofire.request(updateUrl, parameters: parameters).responseJSON { response in
+        let headers: HTTPHeaders = [
+            "token": RemoteServiceManager.retrieveToken() ?? ""
+        ]
+        
+        Alamofire.request(updateUrl, parameters: parameters, headers: headers).responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -155,5 +184,27 @@ struct RemoteServiceManager {
     
     static func sampleProviderIdentifier() -> String {
         return "56bafde0-d2bd-44b5-8f09-8a30d1647eaa"
+    }
+    
+    static func baseURL() -> String {
+        return "https://morning-bayou-42533.herokuapp.com"
+    }
+    
+    static func storeAuthenticationToken(token: String) {
+        let defaults = UserDefaults.standard
+        defaults.set(token, forKey: "token")
+    }
+    
+    static func retrieveToken() -> String? {
+        let defaults = UserDefaults.standard
+        if let token = defaults.string(forKey: "token") {
+            return token
+        }
+        return nil
+    }
+    
+    static func clearToken() {
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "token")
     }
 }
