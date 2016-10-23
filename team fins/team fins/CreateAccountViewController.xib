@@ -17,6 +17,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateAccountViewController" customModule="team_fins" customModuleProvider="target">
             <connections>
+                <outlet property="confirmPasswordField" destination="fPd-5Z-EaW" id="nat-cT-JRT"/>
+                <outlet property="errorLabel" destination="vHe-7b-sr3" id="wWE-FG-bZc"/>
+                <outlet property="passwordField" destination="y2g-Qf-nrr" id="HeK-zd-YJ3"/>
+                <outlet property="usernameField" destination="AL4-5e-eao" id="ftk-lz-BCi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,10 +35,10 @@
                         <constraint firstAttribute="height" constant="8" id="73q-G8-jUA"/>
                     </constraints>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nL-BF-Ctu">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nL-BF-Ctu">
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="weY-Cb-8uC">
-                            <color key="backgroundColor" red="0.3411764706" green="0.0" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.99215686274509807" green="0.76470588235294112" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="180" id="B39-TR-Bci"/>
                             </constraints>
@@ -93,7 +97,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npr-tw-ghj" customClass="BorderedButton" customModule="team_fins" customModuleProvider="target">
-                            <color key="backgroundColor" red="0.27450980390000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.19607843137254902" green="0.83529411764705885" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="ycG-dq-0pK"/>
                             </constraints>
@@ -101,6 +105,9 @@
                             <state key="normal" title="SIGN UP">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="attemptSignup" destination="-1" eventType="touchUpInside" id="BZo-J5-Bzb"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xn-Yn-3aH" customClass="BorderedButton" customModule="team_fins" customModuleProvider="target">
                             <constraints>
@@ -108,10 +115,13 @@
                             </constraints>
                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                             <state key="normal" title="CANCEL">
-                                <color key="titleColor" red="0.27450980390000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.19607843137254902" green="0.83529411764705885" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="cancelSignup" destination="-1" eventType="touchUpInside" id="sYF-Kg-lfy"/>
+                            </connections>
                         </button>
-                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your password must be at least 8 characters long and contain at least 1 letter and 1 number" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpW-TI-oam">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your password must be at least 8 characters long and contain at least 1 letter and 1 number" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpW-TI-oam">
                             <constraints>
                                 <constraint firstAttribute="height" constant="33.670000000000002" id="Oct-yV-7mR"/>
                             </constraints>

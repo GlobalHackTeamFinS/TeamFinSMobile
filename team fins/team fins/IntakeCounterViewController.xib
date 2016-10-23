@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gr2-6u-JZT" customClass="BorderedButton" customModule="team_fins" customModuleProvider="target">
-                    <color key="backgroundColor" red="0.27450980390000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.19607843137254902" green="0.83529411764705885" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="CxI-a3-y5Y"/>
                     </constraints>
@@ -36,7 +36,7 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1s-Ad-O2J" customClass="BorderedButton" customModule="team_fins" customModuleProvider="target">
-                    <color key="backgroundColor" red="0.27450980390000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.99215686274509807" green="0.76470588235294112" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="CPv-V4-3cX"/>
                     </constraints>
@@ -53,7 +53,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
                     <state key="normal" title="-">
-                        <color key="titleColor" red="0.27450980390000002" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.19607843137254902" green="0.83529411764705885" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="incrementNumber" destination="-1" eventType="touchUpInside" id="zk0-hZ-mel"/>
@@ -66,7 +66,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                     <state key="normal" title="LOGOUT">
-                        <color key="titleColor" red="0.27450980392156865" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.19607843137254902" green="0.83529411764705885" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="202" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCL-aT-jKI">
@@ -87,7 +87,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
                     <state key="normal" title="+">
-                        <color key="titleColor" red="0.27450980392156865" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.19607843137254902" green="0.83529411764705885" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="decrementNumber" destination="-1" eventType="touchUpInside" id="Tdu-D0-45w"/>

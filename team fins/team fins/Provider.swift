@@ -35,6 +35,7 @@ struct Provider {
         address = Address.init(fromJSON: fromJSON["address"])
         gpsLocation = GpsLocation.init(fromJSON: fromJSON["gpsLocation"])
     }
+    
 }
 
 struct AcceptedClients {
@@ -50,6 +51,14 @@ struct AcceptedClients {
         children = fromJSON["children"].bool ?? false
         veterans = fromJSON["veterans"].bool ?? false
         disabled = fromJSON["disabled"].bool ?? false
+    }
+    
+    init(men: Bool, women: Bool, children: Bool, veterans: Bool, disabled: Bool) {
+        self.men = men
+        self.women = women
+        self.children = children
+        self.veterans = veterans
+        self.disabled = disabled
     }
 }
 
@@ -67,6 +76,24 @@ struct Address {
         state = fromJSON["state"].string ?? ""
         zip = fromJSON["zip"].int ?? 0
     }
+    
+    init(line1: String, line2: String?, city: String, state: String, zip: Int) {
+        self.line1 = line1
+        self.line2 = line2
+        self.city = city
+        self.state = state
+        self.zip = zip
+    }
+}
+
+class ChangedAddress {
+    var line1: String?
+    var line2: String?
+    var city: String?
+    var state: String?
+    var zip: Int?
+    
+    init(){}
 }
 
 struct GpsLocation {
@@ -76,5 +103,10 @@ struct GpsLocation {
     init(fromJSON: JSON) {
         lat = fromJSON["lat"].float ?? 0.0
         long = fromJSON["long"].float ?? 0.0
+    }
+    
+    init(lat: Float, long: Float) {
+        self.lat = lat
+        self.long = long
     }
 }
