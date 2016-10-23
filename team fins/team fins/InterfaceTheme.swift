@@ -18,7 +18,7 @@ struct InterfaceTheme {
     }
     
     static func uiKeyColor() -> UIColor {
-        return UIColor(red: 70/255.0, green: 191/255.0, blue: 1.0, alpha: 1.0)
+        return UIColor(red: 50/255.0, green: 213/255.0, blue: 242/255.0, alpha: 1.0)
     }
     
 }

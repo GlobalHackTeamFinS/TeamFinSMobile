@@ -9,7 +9,7 @@
 import UIKit
 
 class BorderedButton: UIButton {
-    public var roundRectCornerRadius: CGFloat = 4.0 {
+    public var roundRectCornerRadius: CGFloat = 2.0 {
         didSet {
             self.setNeedsLayout()
         }
