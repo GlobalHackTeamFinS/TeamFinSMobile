@@ -46,10 +46,15 @@ class CreateAccountViewController: UIViewController {
                 self?.displayError(text: "Failed to login. Please try again.")
                 return
             }
-            
-            //TODO: send to edit provider details
-        
+            if let provider = responseProvider {
+                self?.pushToDetailsController(provider: provider)
+            }
         }
+    }
+    
+    func pushToDetailsController(provider: Provider) {
+        let detailsController = EditProviderDetailsViewController.newController(provider: provider)
+        self.navigationController?.pushViewController(detailsController, animated: true)
     }
         
     func displayError(text: String) {

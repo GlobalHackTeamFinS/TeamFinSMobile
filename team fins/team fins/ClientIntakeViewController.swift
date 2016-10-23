@@ -9,5 +9,9 @@
 import UIKit
 
 class ClientIntakeViewController: UIViewController {
-
+    
+    class func newController() -> ClientIntakeViewController {
+        let intakeController = ClientIntakeViewController()
+        return intakeController
+    }
 }
