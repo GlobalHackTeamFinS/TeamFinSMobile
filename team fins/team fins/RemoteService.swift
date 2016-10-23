@@ -50,4 +50,77 @@ struct RemoteServiceManager {
             }
         }
     }
+    
+    static func incrementOccupancyFor(providerId: String, completion: @escaping (Bool) -> Void) {
+        let occupancyUrl = "";
+        let parameters: Parameters = [
+            "providerId" : providerId
+        ]
+        
+        Alamofire.request(occupancyUrl, parameters: parameters).response { response in
+            
+            if ((response.error) != nil) {
+                completion(false)
+                return
+            }
+            completion(true)
+        }
+    }
+    
+    static func decrementOccupancyFor(providerId: String, completion: @escaping (Bool) -> Void) {
+        let occupancyUrl = "";
+        let parameters: Parameters = [
+            "providerId" : providerId
+        ]
+        
+        Alamofire.request(occupancyUrl, parameters: parameters).response { response in
+            if (response.error != nil) {
+                completion(false)
+                return
+            }
+            completion(true)
+        }
+    }
+    
+    static func updateProviderFor(providerId:String, phoneNumber: String?, locationName: String?, description: String?, totalBeds: Int?, occupiedBeds: Int?, intakeStart: Int?, intakeEnd: Int?, completion: @escaping (Provider?) -> Void) {
+        let updateUrl = "";
+        var parameters: Parameters = [:]
+        parameters["providerId"] = providerId
+        if let phone = phoneNumber {
+            parameters["phone"] = phone
+        }
+        if let location = locationName {
+            parameters["locationName"] = location
+        }
+        if let descriptionString = description {
+            parameters["description"] = descriptionString
+        }
+        if let tBedsInt = totalBeds {
+            parameters["totalBeds"] = tBedsInt
+        }
+        if let oBedsInt = occupiedBeds {
+            parameters["occupiedBeds"] = oBedsInt
+        }
+        if let iStart = intakeStart {
+            parameters["intakeStart"] = iStart
+        }
+        if let iEnd = intakeEnd {
+            parameters["intakeEnd"] = iEnd
+        }
+        Alamofire.request(updateUrl, parameters: parameters).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                let provider = Provider(fromJSON: json)
+                completion(provider)
+            case .failure(let error):
+                print(error)
+                completion(nil)
+            }
+        }
+    }
+    
+    static func sampleProviderIdentifier() -> String {
+        return "56bafde0-d2bd-44b5-8f09-8a30d1647eaa"
+    }
 }
