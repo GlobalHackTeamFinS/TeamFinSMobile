@@ -82,7 +82,7 @@ struct RemoteServiceManager {
         }
     }
     
-    static func updateProviderFor(providerId:String, phoneNumber: String?, locationName: String?, description: String?, totalBeds: Int?, occupiedBeds: Int?, intakeStart: Int?, intakeEnd: Int?, completion: @escaping (Provider?) -> Void) {
+    static func updateProviderFor(providerId:String, phoneNumber: String?, locationName: String?, description: String?, totalBeds: Int?, occupiedBeds: Int?, intakeStart: Int?, intakeEnd: Int?, addressObject:Address?, geoLocation: GpsLocation?, clients: AcceptedClients?, completion: @escaping (Provider?) -> Void) {
         let updateUrl = "";
         var parameters: Parameters = [:]
         parameters["providerId"] = providerId
@@ -107,6 +107,39 @@ struct RemoteServiceManager {
         if let iEnd = intakeEnd {
             parameters["intakeEnd"] = iEnd
         }
+        if let address = addressObject {
+            
+            let addressParameters: Parameters = [
+                "line1" : address.line1,
+                "line2" : address.line2,
+                "city" : address.city,
+                "state" : address.state,
+                "zip" : address.zip
+            ]
+            parameters["address"] = addressParameters
+        }
+        
+        if let geo = geoLocation {
+            
+            let geoParameters: Parameters = [
+                "lat" : geo.lat,
+                "long" : geo.long
+            ]
+            parameters["gpsLocation"] = geoParameters
+        }
+        
+        if let acceptedClients = clients {
+            
+            let clientsParameters: Parameters = [
+                "men" : acceptedClients.men,
+                "women" : acceptedClients.women,
+                "children" : acceptedClients.children,
+                "veterans" : acceptedClients.veterans,
+                "disabled" : acceptedClients.disabled
+            ]
+            parameters["acceptedClients"] = clientsParameters
+        }
+        
         Alamofire.request(updateUrl, parameters: parameters).responseJSON { response in
             switch response.result {
             case .success(let value):
