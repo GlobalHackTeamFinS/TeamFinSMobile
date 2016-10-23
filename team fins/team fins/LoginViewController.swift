@@ -11,38 +11,34 @@ import UIKit
 class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField?
     @IBOutlet weak var passwordField: UITextField?
+    @IBOutlet weak var errorLabel: UILabel?
     
     @IBAction func attemptLogin() {
+        errorLabel?.isHidden = true
         guard let username = usernameField?.text else { return }
         guard let password = passwordField?.text else { return }
-        RemoteServiceManager.authenticateUser(username: username, password: password) { responseProvider in
+
+        RemoteServiceManager.authenticateUser(username: username, password: password) {
+            [weak self] responseProvider in
             guard responseProvider != nil else {
-                self.failedAlert(withTitle: "Error", andMessage: "We were unable to validate your username and password, please try again.")
+                self?.failedLabel(withTitle: "Login Failed")
                 return
             }
             
+            //TODO: navigate to client intake controller
         }
+        
     }
     
     @IBAction func createAccount() {
-        guard let username = usernameField?.text else { return }
-        guard let password = passwordField?.text else { return }
-        RemoteServiceManager.createUser(username: username, password: password) { responseProvider in
-            guard responseProvider != nil else {
-                self.failedAlert(withTitle: "Error", andMessage: "We were unable to create a user account with your information, please try again.")
-                return
-            }
-            
-        }
+        errorLabel?.isHidden = true
+        let accountController = CreateAccountViewController.newController()
+        navigationController?.pushViewController(accountController, animated: true)
     }
     
-    func failedAlert(withTitle: String?, andMessage: String?) {
-        let alert = UIAlertController(title: withTitle, message: andMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            alert.dismiss(animated: true, completion: nil)
-            self.clearFields()
-        }))
-        present(alert, animated: true, completion: nil)
+    func failedLabel(withTitle: String) {
+        errorLabel?.text = withTitle
+        errorLabel?.isHidden = false
     }
     
     func clearFields() {
