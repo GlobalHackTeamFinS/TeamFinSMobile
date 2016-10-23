@@ -38,16 +38,21 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nL-BF-Ctu">
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="weY-Cb-8uC">
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="logo-horz" translatesAutoresizingMaskIntoConstraints="NO" id="QHE-sw-8GL">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="87" id="0rF-lJ-fef"/>
+                                        <constraint firstAttribute="width" constant="246" id="Vvk-AT-hkC"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
                             <color key="backgroundColor" red="0.99215686274509807" green="0.76470588235294112" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="180" id="B39-TR-Bci"/>
+                                <constraint firstAttribute="height" constant="140" id="B39-TR-Bci"/>
+                                <constraint firstAttribute="bottom" secondItem="QHE-sw-8GL" secondAttribute="bottom" constant="16" id="esQ-PP-OOs"/>
+                                <constraint firstItem="QHE-sw-8GL" firstAttribute="centerX" secondItem="weY-Cb-8uC" secondAttribute="centerX" id="lzO-5G-JYz"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 ROOF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTU-nI-cAj">
-                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qP9-oW-950">
                             <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -131,7 +136,6 @@
                         </label>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="zTU-nI-cAj" secondAttribute="trailing" id="46m-00-1CH"/>
                         <constraint firstItem="ioQ-Wo-XCl" firstAttribute="leading" secondItem="0nL-BF-Ctu" secondAttribute="leading" constant="16" id="9Gn-7h-17J"/>
                         <constraint firstItem="JpW-TI-oam" firstAttribute="trailing" secondItem="0nL-BF-Ctu" secondAttribute="trailing" constant="-16" id="BXq-zt-odR"/>
                         <constraint firstItem="vHe-7b-sr3" firstAttribute="trailing" secondItem="0nL-BF-Ctu" secondAttribute="trailing" constant="-16" id="Czj-fx-C9X"/>
@@ -140,11 +144,9 @@
                         <constraint firstItem="weY-Cb-8uC" firstAttribute="leading" secondItem="0nL-BF-Ctu" secondAttribute="leading" id="GBl-CJ-nJ2"/>
                         <constraint firstItem="qeF-7V-LLP" firstAttribute="top" secondItem="y2g-Qf-nrr" secondAttribute="top" id="HsN-dy-cLR"/>
                         <constraint firstItem="y2g-Qf-nrr" firstAttribute="leading" secondItem="0nL-BF-Ctu" secondAttribute="leading" constant="32" id="JXG-hh-bko"/>
-                        <constraint firstItem="zTU-nI-cAj" firstAttribute="leading" secondItem="0nL-BF-Ctu" secondAttribute="leading" id="JYo-u5-jAE"/>
                         <constraint firstItem="qeF-7V-LLP" firstAttribute="leading" secondItem="0nL-BF-Ctu" secondAttribute="leading" constant="16" id="LXJ-1S-3Dy"/>
                         <constraint firstItem="AL4-5e-eao" firstAttribute="top" secondItem="vHe-7b-sr3" secondAttribute="bottom" constant="8" id="LwL-FH-ZD9"/>
                         <constraint firstItem="qeF-7V-LLP" firstAttribute="bottom" secondItem="y2g-Qf-nrr" secondAttribute="bottom" id="M6Y-xQ-VxF"/>
-                        <constraint firstItem="zTU-nI-cAj" firstAttribute="bottom" secondItem="weY-Cb-8uC" secondAttribute="bottom" constant="-32" id="NnA-ur-CRV"/>
                         <constraint firstAttribute="trailing" secondItem="npr-tw-ghj" secondAttribute="trailing" constant="16" id="POz-Vu-llh"/>
                         <constraint firstItem="AL4-5e-eao" firstAttribute="top" secondItem="weY-Cb-8uC" secondAttribute="bottom" constant="36" id="SdI-xX-8Ah"/>
                         <constraint firstItem="npr-tw-ghj" firstAttribute="top" secondItem="fPd-5Z-EaW" secondAttribute="bottom" constant="20" id="Std-Kv-pn4"/>
@@ -187,4 +189,7 @@
             <point key="canvasLocation" x="24" y="52"/>
         </view>
     </objects>
+    <resources>
+        <image name="logo-horz" width="394" height="140"/>
+    </resources>
 </document>
