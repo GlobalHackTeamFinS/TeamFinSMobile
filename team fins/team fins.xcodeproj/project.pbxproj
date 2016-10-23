@@ -31,6 +31,7 @@
 		CBF205FB1DBBE00800E03D48 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205FA1DBBE00800E03D48 /* BorderedButton.swift */; };
 		CBF205FC1DBBE2A200E03D48 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBF205F01DBBC7CD00E03D48 /* Lato-Bold.ttf */; };
 		CBF205FD1DBBE2A500E03D48 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBF205F11DBBC7CD00E03D48 /* Lato-Light.ttf */; };
+		CBF205FF1DBC446200E03D48 /* ClientTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205FE1DBC446200E03D48 /* ClientTypeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		CBF205F61DBBDEFF00E03D48 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CBF205F81DBBDF1100E03D48 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CBF205FA1DBBE00800E03D48 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		CBF205FE1DBC446200E03D48 /* ClientTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTypeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				CBF205D31DBBB8DE00E03D48 /* LaunchScreen.storyboard */,
 				CBF205D61DBBB8DE00E03D48 /* Info.plist */,
 				CBF205FA1DBBE00800E03D48 /* BorderedButton.swift */,
+				CBF205FE1DBC446200E03D48 /* ClientTypeView.swift */,
 			);
 			path = "team fins";
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				CBF205DE1DBBBB4B00E03D48 /* CreateAccountViewController.swift in Sources */,
 				299F50321DBC031F00F55A31 /* ValidationHelper.swift in Sources */,
 				CBF205F31DBBC80F00E03D48 /* InterfaceTheme.swift in Sources */,
+				CBF205FF1DBC446200E03D48 /* ClientTypeView.swift in Sources */,
 				CBF205CD1DBBB8DE00E03D48 /* LoginViewController.swift in Sources */,
 				CBF205E71DBBBD1F00E03D48 /* Provider.swift in Sources */,
 				CBF205ED1DBBC2DB00E03D48 /* ClientIntakeViewController.swift in Sources */,

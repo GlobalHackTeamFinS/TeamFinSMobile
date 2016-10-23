@@ -10,6 +10,15 @@ import UIKit
 
 struct InterfaceTheme {
     static func keyColor() -> CGColor {
-        return UIColor(red: 70/255.0, green: 191/255.0, blue: 1.0, alpha: 1.0).cgColor
+        return InterfaceTheme.uiKeyColor().cgColor
     }
+    
+    static func darkTextColor() -> UIColor {
+        return UIColor(red: 45/255.0, green: 44/255.0, blue: 56/255.0, alpha: 1.0)
+    }
+    
+    static func uiKeyColor() -> UIColor {
+        return UIColor(red: 70/255.0, green: 191/255.0, blue: 1.0, alpha: 1.0)
+    }
+    
 }
