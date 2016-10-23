@@ -21,10 +21,12 @@ class EditProviderAddressViewController: UIViewController {
     @IBOutlet weak var existingProviderButtons: UIView?
     
     var provider: Provider?
+    weak var updateReceiver: ReceivesProviderUpdates?
 
-    class func newController(forProvider provider: Provider) -> EditProviderAddressViewController {
+    class func newController(forProvider provider: Provider, updateReceiver: ReceivesProviderUpdates?) -> EditProviderAddressViewController {
         let vc = EditProviderAddressViewController.init(nibName: "EditProviderAddressViewController", bundle: nil)
         vc.provider = provider
+        vc.updateReceiver = updateReceiver
         vc.updateFields()
         return vc
     }
@@ -72,8 +74,8 @@ class EditProviderAddressViewController: UIViewController {
             errorLabel?.text = result.1
             return
         }
-    
-        //TODO: find differences and save
+        
+        //todo: inform provider of update
     }
     
     @IBAction func cancelEdit() {

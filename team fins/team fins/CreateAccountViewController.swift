@@ -42,13 +42,15 @@ class CreateAccountViewController: UIViewController {
         
         RemoteServiceManager.createUser(username: username, password: pass) {
             [weak self] responseProvider in
-            guard responseProvider != nil else {
-                self?.displayError(text: "Failed to login. Please try again.")
-                return
-            }
+            DispatchQueue.main.async {
+                guard let provider = responseProvider else {
+                    self?.displayError(text: "Failed to login. Please try again.")
+                    return
+                }
             
-            //TODO: send to edit provider details
-        
+                let vc = EditProviderDetailsViewController.newController(forProvider: provider, updateReceiver: nil)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
         
