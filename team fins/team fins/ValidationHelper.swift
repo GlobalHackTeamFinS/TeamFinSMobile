@@ -10,10 +10,7 @@ import Foundation
 
 struct ValidationHelper {
     static func validEmail(email: String) -> Bool {
-        let text = email.trimmingCharacters(in: NSCharacterSet.whitespaces)
-        let regexString = ".+@.+\\..+"
-        let predicate = NSPredicate.init(format: "SELF MATCHES \(regexString)")
-        return predicate.evaluate(with: text)
+        return email.characters.count > 0
     }
     
     static func validPassword(pass: String, confirmPass:String) -> (success: Bool, error: String?) {
