@@ -22,8 +22,6 @@
 		CBF205E41DBBBC9600E03D48 /* EditProviderDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF205E21DBBBC9600E03D48 /* EditProviderDetailsViewController.xib */; };
 		CBF205E71DBBBD1F00E03D48 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205E61DBBBD1F00E03D48 /* Provider.swift */; };
 		CBF205EA1DBBC2B500E03D48 /* ProviderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205E91DBBC2B500E03D48 /* ProviderInteractor.swift */; };
-		CBF205ED1DBBC2DB00E03D48 /* ClientIntakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205EB1DBBC2DB00E03D48 /* ClientIntakeViewController.swift */; };
-		CBF205EE1DBBC2DB00E03D48 /* ClientIntakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF205EC1DBBC2DB00E03D48 /* ClientIntakeViewController.xib */; };
 		CBF205F31DBBC80F00E03D48 /* InterfaceTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205F21DBBC80F00E03D48 /* InterfaceTheme.swift */; };
 		CBF205F51DBBCA2700E03D48 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205F41DBBCA2700E03D48 /* RemoteService.swift */; };
 		CBF205F71DBBDEFF00E03D48 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF205F61DBBDEFF00E03D48 /* CoreLocation.framework */; };
@@ -34,6 +32,10 @@
 		CBF205FF1DBC446200E03D48 /* ClientTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF205FE1DBC446200E03D48 /* ClientTypeView.swift */; };
 		CBF206021DBC4AF500E03D48 /* EditProviderAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF206001DBC4AF500E03D48 /* EditProviderAddressViewController.swift */; };
 		CBF206031DBC4AF500E03D48 /* EditProviderAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF206011DBC4AF500E03D48 /* EditProviderAddressViewController.xib */; };
+		CBF206061DBC641C00E03D48 /* IntakeCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF206041DBC641C00E03D48 /* IntakeCounterViewController.swift */; };
+		CBF206071DBC641C00E03D48 /* IntakeCounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF206051DBC641C00E03D48 /* IntakeCounterViewController.xib */; };
+		CBF2060E1DBC7DB600E03D48 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF2060B1DBC7DB600E03D48 /* TPKeyboardAvoidingScrollView.m */; };
+		CBF2060F1DBC7DB600E03D48 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF2060D1DBC7DB600E03D48 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,8 +58,6 @@
 		CBF205E21DBBBC9600E03D48 /* EditProviderDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProviderDetailsViewController.xib; sourceTree = "<group>"; };
 		CBF205E61DBBBD1F00E03D48 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		CBF205E91DBBC2B500E03D48 /* ProviderInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderInteractor.swift; sourceTree = "<group>"; };
-		CBF205EB1DBBC2DB00E03D48 /* ClientIntakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientIntakeViewController.swift; sourceTree = "<group>"; };
-		CBF205EC1DBBC2DB00E03D48 /* ClientIntakeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClientIntakeViewController.xib; sourceTree = "<group>"; };
 		CBF205F01DBBC7CD00E03D48 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		CBF205F11DBBC7CD00E03D48 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		CBF205F21DBBC80F00E03D48 /* InterfaceTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceTheme.swift; sourceTree = "<group>"; };
@@ -68,6 +68,13 @@
 		CBF205FE1DBC446200E03D48 /* ClientTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTypeView.swift; sourceTree = "<group>"; };
 		CBF206001DBC4AF500E03D48 /* EditProviderAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProviderAddressViewController.swift; sourceTree = "<group>"; };
 		CBF206011DBC4AF500E03D48 /* EditProviderAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProviderAddressViewController.xib; sourceTree = "<group>"; };
+		CBF206041DBC641C00E03D48 /* IntakeCounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntakeCounterViewController.swift; sourceTree = "<group>"; };
+		CBF206051DBC641C00E03D48 /* IntakeCounterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntakeCounterViewController.xib; sourceTree = "<group>"; };
+		CBF206091DBC7DB500E03D48 /* team fins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "team fins-Bridging-Header.h"; sourceTree = "<group>"; };
+		CBF2060A1DBC7DB600E03D48 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		CBF2060B1DBC7DB600E03D48 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		CBF2060C1DBC7DB600E03D48 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		CBF2060D1DBC7DB600E03D48 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +129,7 @@
 		CBF205C91DBBB8DE00E03D48 /* team fins */ = {
 			isa = PBXGroup;
 			children = (
+				CBF206081DBC7DA700E03D48 /* objcfiles */,
 				299F502E1DBBFD5E00F55A31 /* Modals */,
 				CBF205EF1DBBC7C200E03D48 /* Fonts */,
 				CBF205CA1DBBB8DE00E03D48 /* AppDelegate.swift */,
@@ -142,14 +150,14 @@
 			isa = PBXGroup;
 			children = (
 				CBF205CC1DBBB8DE00E03D48 /* LoginViewController.swift */,
-				CBF205EB1DBBC2DB00E03D48 /* ClientIntakeViewController.swift */,
-				CBF205EC1DBBC2DB00E03D48 /* ClientIntakeViewController.xib */,
 				CBF205DC1DBBBB4B00E03D48 /* CreateAccountViewController.swift */,
 				CBF205DD1DBBBB4B00E03D48 /* CreateAccountViewController.xib */,
 				CBF205E11DBBBC9600E03D48 /* EditProviderDetailsViewController.swift */,
 				CBF205E21DBBBC9600E03D48 /* EditProviderDetailsViewController.xib */,
 				CBF206001DBC4AF500E03D48 /* EditProviderAddressViewController.swift */,
 				CBF206011DBC4AF500E03D48 /* EditProviderAddressViewController.xib */,
+				CBF206041DBC641C00E03D48 /* IntakeCounterViewController.swift */,
+				CBF206051DBC641C00E03D48 /* IntakeCounterViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -181,6 +189,18 @@
 				CBF205F11DBBC7CD00E03D48 /* Lato-Light.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		CBF206081DBC7DA700E03D48 /* objcfiles */ = {
+			isa = PBXGroup;
+			children = (
+				CBF2060A1DBC7DB600E03D48 /* TPKeyboardAvoidingScrollView.h */,
+				CBF2060B1DBC7DB600E03D48 /* TPKeyboardAvoidingScrollView.m */,
+				CBF2060C1DBC7DB600E03D48 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				CBF2060D1DBC7DB600E03D48 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				CBF206091DBC7DB500E03D48 /* team fins-Bridging-Header.h */,
+			);
+			name = objcfiles;
 			sourceTree = "<group>";
 		};
 		F100AC0A43845AADF72A2C42 /* Frameworks */ = {
@@ -229,6 +249,7 @@
 					CBF205C61DBBB8DE00E03D48 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = TAYB63HDU6;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -262,9 +283,9 @@
 				CBF205E41DBBBC9600E03D48 /* EditProviderDetailsViewController.xib in Resources */,
 				CBF205D21DBBB8DE00E03D48 /* Assets.xcassets in Resources */,
 				CBF205D01DBBB8DE00E03D48 /* Main.storyboard in Resources */,
-				CBF205EE1DBBC2DB00E03D48 /* ClientIntakeViewController.xib in Resources */,
 				CBF205FD1DBBE2A500E03D48 /* Lato-Light.ttf in Resources */,
 				CBF206031DBC4AF500E03D48 /* EditProviderAddressViewController.xib in Resources */,
+				CBF206071DBC641C00E03D48 /* IntakeCounterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,17 +347,19 @@
 				CBF205FB1DBBE00800E03D48 /* BorderedButton.swift in Sources */,
 				CBF205E31DBBBC9600E03D48 /* EditProviderDetailsViewController.swift in Sources */,
 				299F50301DBBFD6E00F55A31 /* AlertGenerator.swift in Sources */,
+				CBF2060F1DBC7DB600E03D48 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				CBF205F51DBBCA2700E03D48 /* RemoteService.swift in Sources */,
 				CBF205EA1DBBC2B500E03D48 /* ProviderInteractor.swift in Sources */,
+				CBF206061DBC641C00E03D48 /* IntakeCounterViewController.swift in Sources */,
 				299F502D1DBBE36800F55A31 /* SwiftyJSON.swift in Sources */,
 				CBF205DE1DBBBB4B00E03D48 /* CreateAccountViewController.swift in Sources */,
 				299F50321DBC031F00F55A31 /* ValidationHelper.swift in Sources */,
+				CBF2060E1DBC7DB600E03D48 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				CBF205F31DBBC80F00E03D48 /* InterfaceTheme.swift in Sources */,
 				CBF206021DBC4AF500E03D48 /* EditProviderAddressViewController.swift in Sources */,
 				CBF205FF1DBC446200E03D48 /* ClientTypeView.swift in Sources */,
 				CBF205CD1DBBB8DE00E03D48 /* LoginViewController.swift in Sources */,
 				CBF205E71DBBBD1F00E03D48 /* Provider.swift in Sources */,
-				CBF205ED1DBBC2DB00E03D48 /* ClientIntakeViewController.swift in Sources */,
 				CBF205CB1DBBB8DE00E03D48 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +482,7 @@
 			baseConfigurationReference = 357A7C06CC739AB8367DA6FB /* Pods-team fins.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = TAYB63HDU6;
 				INFOPLIST_FILE = "team fins/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9;
@@ -467,6 +491,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "23d2538f-bba7-4615-a1ec-f370c7b059ef";
 				PROVISIONING_PROFILE_SPECIFIER = "Team Fins Trey Dev";
+				SWIFT_OBJC_BRIDGING_HEADER = "team fins/team fins-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -476,6 +502,7 @@
 			baseConfigurationReference = 1F4BB3454A04AE7E2F0FF370 /* Pods-team fins.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = TAYB63HDU6;
 				INFOPLIST_FILE = "team fins/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9;
@@ -484,6 +511,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "23d2538f-bba7-4615-a1ec-f370c7b059ef";
 				PROVISIONING_PROFILE_SPECIFIER = "Team Fins Trey Dev";
+				SWIFT_OBJC_BRIDGING_HEADER = "team fins/team fins-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

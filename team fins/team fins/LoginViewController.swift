@@ -20,12 +20,21 @@ class LoginViewController: UIViewController {
 
         RemoteServiceManager.authenticateUser(username: username, password: password) {
             [weak self] responseProvider in
-            guard responseProvider != nil else {
-                self?.failedLabel(withTitle: "Login Failed")
-                return
+            DispatchQueue.main.async {
+                guard let provider = responseProvider else {
+                    self?.failedLabel(withTitle: "Login Failed")
+                    return
+                }
+                
+                guard provider.locationName.characters.count > 0 else {
+                    let vc = EditProviderDetailsViewController.newController(forProvider: provider, updateReceiver: nil)
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                    return
+                }
+                
+                let vc = IntakeCounterViewController.newController(provider: provider)
+                self?.navigationController?.pushViewController(vc, animated: true)
             }
-            
-            //TODO: navigate to client intake controller
         }
         
     }
