@@ -79,7 +79,7 @@ struct RemoteServiceManager {
         let occupancyUrl = "\(RemoteServiceManager.baseURL())/provider/\(providerId)/increment"
         
         let headers: HTTPHeaders = [
-            "token": RemoteServiceManager.retrieveToken() ?? ""
+            "Authorization": "Bearer \(RemoteServiceManager.retrieveToken() ?? "")"
         ]
         
         Alamofire.request(occupancyUrl, headers: headers).response { response in
@@ -95,7 +95,7 @@ struct RemoteServiceManager {
         let occupancyUrl = "\(RemoteServiceManager.baseURL())/provider/\(providerId)/decrement"
         
         let headers: HTTPHeaders = [
-            "token": RemoteServiceManager.retrieveToken() ?? ""
+            "Authorization": "Bearer \(RemoteServiceManager.retrieveToken() ?? "")"
         ]
         
         Alamofire.request(occupancyUrl, headers: headers).response { response in
@@ -108,9 +108,8 @@ struct RemoteServiceManager {
     }
     
     static func updateProviderFor(providerId:String, phoneNumber: String?, locationName: String?, description: String?, totalBeds: Int?, occupiedBeds: Int?, intakeStart: Int?, intakeEnd: Int?, addressObject:Address?, geoLocation: GpsLocation?, clients: AcceptedClients?, completion: @escaping (Provider?) -> Void) {
-        let updateUrl = "";
+        let updateUrl = "\(RemoteServiceManager.baseURL())/provider/\(providerId)";
         var parameters: Parameters = [:]
-        parameters["providerId"] = providerId
         if let phone = phoneNumber {
             parameters["phone"] = phone
         }
@@ -166,7 +165,7 @@ struct RemoteServiceManager {
         }
         
         let headers: HTTPHeaders = [
-            "token": RemoteServiceManager.retrieveToken() ?? ""
+            "Authorization": "Bearer \(RemoteServiceManager.retrieveToken() ?? "")"
         ]
         
         Alamofire.request(updateUrl, parameters: parameters, headers: headers).responseJSON { response in
@@ -180,6 +179,7 @@ struct RemoteServiceManager {
                 completion(nil)
             }
         }
+        
     }
     
     static func sampleProviderIdentifier() -> String {
